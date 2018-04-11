@@ -12,11 +12,14 @@ order: 0
 ## 튜토리얼 소요 시간
 - 약 1시간
 
+## 실습 내용
+- 데비안 패키지를 제작하여 배포하는 것까지 배울 것입니다.
+- LaunchPad에서 지원하는 Persnal package Archives for Ubuntu를 이용하여 배포해볼 것 입니다.
+
+
 ## 준비물
 - Ubuntu 와 인터넷이 연결된 컴퓨터
 - launchpad 계정
 
 ## 선이수 과목
 - **런치패드에 가입하기** 튜토리얼
-
-
