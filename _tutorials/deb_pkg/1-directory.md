@@ -148,5 +148,25 @@ override_dh_auto_install-indep:
     $(MAKE) -C docs install
 ```
 
+### 기타 파일
+#### README, doc
+- 패키지를 사용하기 위한 정보를 담은 파일
+- README나 doc파일을 만들어 내용을 작성
+    - doc파일은 upstream source에 대한 문서
+    - README파일은 비표준적인 특징이 있는 경우 작성
+    
+#### source/format
+- 초기 생성된 내용을 그대로 유지
+- 소스 패키지의 버전을 명시
+    - 1.0 : 기본 형식(Default값)
+    - 3.0 (quilt) : upsteam과 분리된
+    - 3.0 (native) : debian native 패키지 (upstream이 없음)
 
+#### install
+- dh_install에 의해서 옮겨지는 파일 목록
+- 생성되는 패키지가 하나면, 파일명을 "install"로 설정
+- 여러개의 패키지가 생성되면 "[패키지명].install"로 설정
 
+#### watch
+- upstream패키지를 debian패키지로 만들 때, 선택적으로 사용
+- upstream패키지의 업데이트 상태를 확인

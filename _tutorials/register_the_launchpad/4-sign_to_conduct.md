@@ -25,5 +25,3 @@ order: 4
 1. continue를 클릭합니다.
 
 ![paste](img/paste.PNG)
-
-런치패드에 가입을 완료했습니다.
