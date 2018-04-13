@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 category: 런치패드에 가입하기
-title: 2. PGP키를 생성하는 방법에 대해서 배웁니다.
+title: 2. PGP키를 생성하기
 order: 2
 ---
 
@@ -18,11 +18,15 @@ order: 2
 ### MacOS
 1. 다음을 터미널에 붙여넣어 brew를 설치합니다.
 
-> /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
+    ```bash
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    ```
+    
 1. 다음을 터미널에 입력해 GPG를 설치합니다.
 
-> brew install gpg
+    ```bash
+    brew install gpg
+    ```
 
 ### Windows
 1. [GnuPG 다운로드 사이트](https://gnupg.org/download/)에 가셔서 적절한 설치파일을 설치합니다.
@@ -33,34 +37,38 @@ order: 2
 
 1. 다음을 입력하여 GPG가 제대로 설치되어있는지 확인합니다. 설치되어있지 않다면 위의 GPG설치하기를 진행합니다
 
-> gpg --version
-
+    ```bash
+    gpg --version
+    ```
+    
 1. 다음을 입력하여 키를 만듭니다.
 
-> gpg --gen-key #gpg1
-> gpg --full-gen-key #gpg2
+    ```bash
+    gpg --gen-key #gpg1
+    gpg --full-gen-key #gpg2
+    ```
 
 1. 다음 과 같은 설정이 나옵니다 기본값으로 설정하려면 엔터키를 누릅니다.
 1. Is this correct? 라는 질문이 나오면 y키를 누릅니다.
 1. 이제 기본설정이 완료 되었습니다.
 
-![generate key](img/gen_key.PNG)
+![generate key](img/gen_key.PNG){: width="50%" height="50%"}
 
 1. 다음 이미지를 참고하여 입력합니다.
 2. Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? 가 나오면 제대로 입력했는지를 확인한 후 O를 누릅니다.
 3. 비밀번호를 입력하면 랜덤바이트를 모읍니다.
 
-![identify key](img/identify_key.PNG)
+![identify key](img/identify_key.PNG){: width="50%" height="50%"}
 
 1. 다음을 입력하여 키 ID를 확인합니다.
 
-> gpg --keyid-format short -k
-
+    ```bash
+    gpg --keyid-format short -k
+    ```
 1. 다음을 입력하여 키를 업로드 합니다.
 2. [key-id]에는 방금 확인한 본인의 키 ID를 입력합니다.
 1. 동기화 될때까지 기다립니다.
 
-> gpg --send-key --keyserver keyserver.ubuntu.com [key-id]
-
-
-
+    ```bash
+    gpg --send-key --keyserver keyserver.ubuntu.com [key-id]
+    ```
