@@ -31,10 +31,14 @@ order: 2
     - commit log에 자동으로 작성자와 작성자 메일이 등록되에 설정
     - ~/.bashrc나 ~/.zshrs같은 환경설정 파일에 등록
     - Debian과 Ubuntu에서 사용 가능
-        >export DEBFULLNAME="Eojin Kim"
-        >export DEBEMAIL="test@test.com"
+        ```bash
+        export DEBFULLNAME="Eojin Kim"
+        export DEBEMAIL="test@test.com"
+        ```
     - Ubuntu에서만 사용 가능
-        >export UBUMAIL="Eojin Kim <test@test.com>"
+        ```bash
+        export UBUMAIL="Eojin Kim <test@test.com>"
+        ```
         
 1. pbuild환경설정
     - 빌드를 위한 깔끔한 환경을 제공해 줌

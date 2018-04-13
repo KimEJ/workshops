@@ -44,12 +44,12 @@ hello (1.0.0-0ubuntu1) xenial; urgency=medium
 ```
 
 ### control
-- 패키지의 메타 정보를 기록한 파일
-    - Source패키지의 정보와 생성할 debian패키지의 정보를 작성
+- 패키지의 메타 정보를 기록한 파일입니다.
+    - Source패키지의 정보와 생성할 debian패키지의 정보를 작성합니다.
 - Source패키지 정보
-    - Source 이름, architecture, depends, description 등을 기록
+    - Source 이름, architecture, depends, description 등
 - Maintainer
-    - Ubuntu에서는 maintainer를 Ubuntu Developers로 설정
+    - Ubuntu에서는 maintainer를 Ubuntu Developers로 설정합니다.
 
 #### control의 예시
 ```bash
@@ -78,8 +78,8 @@ Description: developer library for sample package.
 ```
 
 ### copyright
-- 패키지 내부 파일들의 라이센스를 명시
-- 파일별, 디렉토리별로 나눠서 작성할 수 있음
+- 패키지 내부 파일들의 라이센스를 명시합니다.
+- 파일별, 디렉토리별로 나눠서 작성할 수 있습니다.
 
 #### copyright의 예시
 ```bash
@@ -119,11 +119,11 @@ License: MIT
 ```
 
 ### rules
-- Makefile과 같이 패키지의 빌드를 위한 파일
-- debhelper에 의해 많은 부분이 자동화되어있음
-    - dh 명렁을 사용해서 빌드를 수행함
-    - 설정을 커스터마이징할 수 있음
-- 패키징로그는 "debian/package.debhelper.log"파일에 기록됨
+- Makefile과 같이 패키지의 빌드를 위한 파일입니다.
+- debhelper에 의해 많은 부분이 자동화되어있습니다.
+    - dh 명렁을 사용해서 빌드를 수행합니다.
+    - 설정을 커스터마이징할 수 있습니다.
+- 패키징로그는 "debian/package.debhelper.log"파일에 기록됩니다.
 
 #### rules의 예시
 ```bash
@@ -134,6 +134,8 @@ License: MIT
 override_dh_strip:
     dh_strip -Xfoo
 ```
+
+
 ```bash
 #!/usr/bin/make -f
 %:
@@ -150,23 +152,23 @@ override_dh_auto_install-indep:
 
 ### 기타 파일
 #### README, doc
-- 패키지를 사용하기 위한 정보를 담은 파일
-- README나 doc파일을 만들어 내용을 작성
-    - doc파일은 upstream source에 대한 문서
-    - README파일은 비표준적인 특징이 있는 경우 작성
+- 패키지를 사용하기 위한 정보를 담은 파일입니다.
+- README나 doc파일을 만들어 내용을 작성합니다.
+    - doc파일은 upstream source에 대한 문서입니다.
+    - README파일은 비표준적인 특징이 있는 경우 작성합니다.
     
 #### source/format
-- 초기 생성된 내용을 그대로 유지
-- 소스 패키지의 버전을 명시
+- 초기 생성된 내용을 그대로 유지합니다.
+- 소스 패키지의 버전을 명시합니다.
     - 1.0 : 기본 형식(Default값)
     - 3.0 (quilt) : upsteam과 분리된
     - 3.0 (native) : debian native 패키지 (upstream이 없음)
 
 #### install
-- dh_install에 의해서 옮겨지는 파일 목록
-- 생성되는 패키지가 하나면, 파일명을 "install"로 설정
-- 여러개의 패키지가 생성되면 "[패키지명].install"로 설정
+- dh_install에 의해서 옮겨지는 파일 목록입니다.
+- 생성되는 패키지가 하나면, 파일명을 "install"로 설정합니다.
+- 여러개의 패키지가 생성되면 "[패키지명].install"로 설정합니다.
 
 #### watch
-- upstream패키지를 debian패키지로 만들 때, 선택적으로 사용
-- upstream패키지의 업데이트 상태를 확인
+- upstream패키지를 debian패키지로 만들 때, 선택적으로 사용합니다.
+- upstream패키지의 업데이트 상태를 확인합니다.
