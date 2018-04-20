@@ -18,6 +18,6 @@ order: 3
     - 불필요한 템플릿 파일을 제거
     - 주요 파일에 대한 내용 작성
 - 다음 명령어를 사용하여 debian디렉토리를 생성해줍니다.
-    ``````bash
+    ```bash
     dh_make --native -p hello_1.0.0 -c mit -s
-    
+   ```
